@@ -29,5 +29,5 @@ See [Packagist](https://packagist.org/packages/katzien/php-mime-type) for more d
 ## Usage
 
 ```php
-$type = \MimeType\MimeType::getType('my-file.pdf');
+$type = \MimeType\MimeType::getType('my-file.pdf'); // returns "application/pdf"
 ```
