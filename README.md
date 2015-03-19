@@ -12,17 +12,19 @@ A PHP library to detect the mime type of a file.
 
 ## Not invented here
 
-This is a modernised version of [Jason Sheets's mimetype class](http://www.phpclasses.org/browse/file/2743.html)
+This is a modernised version of [Jason Sheets's mimetype class](http://www.phpclasses.org/browse/file/2743.html).
 
 ## Installation
 
-To add the PhpMimeType library to your project, simply run:
+To add the PhpMimeType library to your project, simply run
 
 ```sh
 composer require katzien/php-mime-type
 ```
 
-See [Packagist](https://packagist.org/packages/katzien/php-mime-type) for details.
+from the directory where your composer.json file is.
+
+See [Packagist](https://packagist.org/packages/katzien/php-mime-type) for more details.
 
 ## Usage
 
