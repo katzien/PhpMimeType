@@ -13,3 +13,19 @@ A PHP library to detect the mime type of a file.
 ## Not invented here
 
 This is a modernised version of [Jason Sheets's mimetype class](http://www.phpclasses.org/browse/file/2743.html)
+
+## Installation
+
+To add the PhpMimeType library to your project, simply run:
+
+```sh
+composer require katzien/php-mime-type
+```
+
+See [Packagist](https://packagist.org/packages/katzien/php-mime-type) for details.
+
+## Usage
+
+```php
+$type = \MimeType\MimeType::getType('my-file.pdf');
+```
