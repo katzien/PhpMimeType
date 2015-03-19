@@ -1,0 +1,21 @@
+{
+  "name": "katzien/php-mime-type",
+  "type": "library",
+  "description": "A PHP library to detect the mime type of files.",
+  "keywords": ["php", "mimetype"],
+  "homepage": "https://github.com/katzien/PhpMimeType",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Kat Zien"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "MimeType\\": "src/"
+    }
+  }
+}
