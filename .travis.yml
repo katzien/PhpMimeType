@@ -1,4 +1,5 @@
 language: php
+
 php:
   - 5.3
   - 5.4
@@ -8,12 +9,12 @@ php:
   - nightly
 
 before_script:
-  - composer install --dev --no-interaction
+   - wget http://getcomposer.org/composer.phar
+   - php composer.phar install --dev --no-interaction
 
 script:
-  - ./phpunit.sh
+  - mkdir -p build/logs
+  - phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml
 
 after_script:
-  # - php vendor/bin/coveralls
-  # or enable logging
   - php vendor/bin/coveralls -v
