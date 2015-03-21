@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vendor/phpunit/phpunit/phpunit -c phpunit.xml --coverage-clover test/coverage/clover.xml
+vendor/phpunit/phpunit/phpunit -c phpunit.xml --coverage-clover build/logs/clover.xml
