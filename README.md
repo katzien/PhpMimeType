@@ -26,6 +26,14 @@ from the directory where your composer.json file is.
 
 See [Packagist](https://packagist.org/packages/katzien/php-mime-type) for more details.
 
+##  Versions
+
+1.* is compatible with PHP 5.3 - 5.5
+
+2.* is compatible with PHP 5.6
+
+(version 2.0.0 uses PHPUnit 5.* which requires PHP 5.6)
+
 ## Usage
 
 ```php
