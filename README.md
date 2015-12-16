@@ -32,7 +32,8 @@ See [Packagist](https://packagist.org/packages/katzien/php-mime-type) for more d
 
 2.* is compatible with PHP 5.6
 
-(version 2.0.0 uses PHPUnit 5.* which requires PHP 5.6)
+changelog:
+- use PHPUnit 5.* which requires PHP 5.6
 
 ## Usage
 
