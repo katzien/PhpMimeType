@@ -16,7 +16,7 @@ This is a modernised version of [Jason Sheets's mimetype class](http://www.phpcl
 
 ## Installation
 
-To add the PhpMimeType library to your project, simply run
+To add the PhpMimeType library to your project run
 
 ```sh
 composer require katzien/php-mime-type
