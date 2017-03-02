@@ -1052,7 +1052,7 @@ class MimeType
      */
     public static function findType($extension)
     {
-        return (!empty($extension) && isset(self::$types[extension])) ? self::$types[extension] : FALSE;
+        return (!empty($extension) && isset(self::$types[$extension])) ? self::$types[$extension] : FALSE;
     }
     
     /**
