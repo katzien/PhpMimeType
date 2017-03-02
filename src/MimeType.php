@@ -994,7 +994,7 @@ class MimeType
     /**
      * @param $filename
      * @param $use_finfo
-     * @return string
+     * @return string|false
      * @throws \Exception
      */
     public static function getType($filename, $use_finfo = FALSE)
@@ -1014,6 +1014,10 @@ class MimeType
         return $mime_type;
     }
     
+    /**
+     * @param $filename
+     * @return string|false
+     */
     public static function finfoType($filename)
     {
         $mime_type = FALSE;
@@ -1044,13 +1048,17 @@ class MimeType
 
     /**
      * @param $extension
-     * @return string
+     * @return string|false
      */
     public static function findType($extension)
     {
         return (!empty($extension) && isset(self::$types[extension])) ? self::$types[extension] : FALSE;
     }
     
+    /**
+     * @param $mime_type
+     * @return string|false
+     */
     public static function findExtension($mime_type)
     {
         return array_search(strtolower($mime_type), self::$types);
