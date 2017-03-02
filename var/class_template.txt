@@ -1,0 +1,84 @@
+<?php
+
+namespace MimeType;
+
+class MimeType
+{
+    const DEFAULT_MIME_TYPE = "application/octet-stream";
+
+    private static $types = %s;
+
+    /**
+     * @param $filename
+     * @param $use_finfo
+     * @return string|false
+     * @throws \Exception
+     */
+    public static function getType($filename, $use_finfo = FALSE)
+    {
+        self::validateFilename($filename);
+        
+        $extension = pathinfo($filename, PATHINFO_EXTENSION);
+        
+        $mime_type = self::findType($extension);
+        
+        if (empty($mime_type) && !empty($use_finfo))
+            $mime_type = self::finfoType($filename);
+        
+        if (empty($mime_type))
+            $mime_type = self::DEFAULT_MIME_TYPE;
+        
+        return $mime_type;
+    }
+    
+    /**
+     * @param $filename
+     * @return string|false
+     */
+    public static function finfoType($filename)
+    {
+        $mime_type = FALSE;
+        
+        if (function_exists('finfo_open') && $finfo = @finfo_open(FILEINFO_MIME_TYPE)) {
+            $mime_type = finfo_file($finfo, $filename);
+            finfo_close($finfo);
+        }
+        
+        return $mime_type;
+    }
+
+    /**
+     * @param $filename
+     * @throws \Exception
+     */
+    private static function validateFilename($filename)
+    {
+        if (!is_string($filename))
+            throw new \Exception("Filename not a string");
+
+        if ($filename == "")
+            throw new \Exception("No filename given");
+        
+        if ($last = strrchr($filename, DIRECTORY_SEPARATOR) && $last == (strlen($filename)-1))
+            throw new \Exception("Filename is a Path");
+    }
+
+    /**
+     * @param $extension
+     * @return string|false
+     */
+    public static function findType($extension)
+    {
+        return (!empty($extension) && isset(self::$types[$extension])) ? self::$types[$extension] : FALSE;
+    }
+    
+    /**
+     * @param $mime_type
+     * @return string|false
+     */
+    public static function findExtension($mime_type)
+    {
+        return array_search(strtolower($mime_type), self::$types);
+    }
+
+}
