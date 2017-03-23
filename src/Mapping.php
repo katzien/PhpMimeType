@@ -7,7 +7,7 @@ class Mapping
     /**
      * source: https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types
      */
-    public static $types = [
+    public static $types = array(
         'ez'          => 'application/andrew-inset',
         'aw'          => 'application/applixware',
         'atom'        => 'application/atom+xml',
@@ -981,5 +981,5 @@ class Mapping
         'movie'       => 'video/x-sgi-movie',
         'smv'         => 'video/x-smv',
         'ice'         => 'x-conference/x-cooltalk',
-    ];
+    );
 }
