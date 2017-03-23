@@ -27,10 +27,16 @@ See [Packagist](https://packagist.org/packages/katzien/php-mime-type) for more d
 
 ## Version Guidance
 
-| Version | Status      | PHP version required |
-|---------|-------------|----------------------|
-| 1.x     | Should work, but no longer actively maintained.  | min. 5.3             |
-| 2.x     | Latest, maintained.      | min. 5.6             |
+| Version | Status               | PHP version required |
+|---------|----------------------|----------------------|
+| 1.x     | Maintained           | min. 5.3             |
+| 2.x     | Latest (recommended) | min. 5.6             |
+
+If you're using PHP 5.6 or higher, you should use the latest 2.x version. There is no difference in usage between 1.x and 2.x, so the upgrade should not require any code changes.
+
+Differences between 1.x and 2.x:
+- syntax
+- versions of composer dependencies
 
 ## Usage
 
