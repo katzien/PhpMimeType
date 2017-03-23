@@ -29,8 +29,8 @@ See [Packagist](https://packagist.org/packages/katzien/php-mime-type) for more d
 
 | Version | Status      | PHP version required |
 |---------|-------------|----------------------|
-| 1.x     | Maintained  | min. 5.3             |
-| 2.x     | Latest      | min. 5.6             |
+| 1.x     | Should work, but no longer actively maintained.  | min. 5.3             |
+| 2.x     | Latest, maintained.      | min. 5.6             |
 
 ## Usage
 
